@@ -15,7 +15,7 @@ public class PersonService {
 
     private PersonRepository personRepository;
 
-    private Person createPerson(Person person) {
+    public Person createPerson(Person person) {
         return personRepository.save(person);
     }
 
@@ -26,5 +26,5 @@ public class PersonService {
     public Optional<Person> findPersonByEmail(String email) {
         return personRepository.findPersonByEmail(email);
     }
-
+    
 }
